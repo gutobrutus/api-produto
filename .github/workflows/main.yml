@@ -33,6 +33,6 @@ jobs:
         # Path to the Dockerfile
         file: ./src/Dockerfile
         push: true
-        tags: 
+        tags: |
           gutofunny/api-k8s-produto:latest
           gutofunny/api-k8s-produto:${{github.run_number}}
