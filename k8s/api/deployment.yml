@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-produtos
+  name: api
 spec:
-  replicas: 10
+  replicas: 5
   selector:
     matchLabels:
-      app: api-produtos
+      app: api
   template:
     metadata:
       labels:
-        app: api-produtos
+        app: api
     spec:
       containers:
-      - name: api-produtos
+      - name: api
         image: gutofunny/api-k8s-produto:latest
         ports:
         - containerPort: 8080
