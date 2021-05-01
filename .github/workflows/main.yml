@@ -62,6 +62,12 @@ jobs:
         uses: Azure/k8s-deploy@v1.3
         with:
           manifests: |
-            k8s/mongodb/deployment.yaml
-            k8s/mongodb/service.yaml
+            k8s/mongo-db/deployment.yml
+            k8s/mongo-db/service.yml
       
+      - name: Deploy WebAPI
+        uses: Azure/k8s-deploy@v1.3
+        with:
+          manifests: |
+            k8s/api/deployment.yml
+            k8s/api/service.yml
